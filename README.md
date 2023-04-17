@@ -1,2 +1,3 @@
 # OSCwebsite
-Website for Oregon Software Consultants in HTTPS and CCS
+Website for Oregon Software Consultants.
+It uses JS, HTML, and CCS. 
