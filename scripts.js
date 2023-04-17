@@ -12,13 +12,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const projectsContainer = document.getElementById('projects-container');
 
-    projects.forEach((project) => {
+    projects.forEach((project, index) => {
         const projectArticle = document.createElement('article');
         const projectTitle = document.createElement('h3');
         const projectDescription = document.createElement('p');
 
         projectTitle.textContent = project.title;
         projectDescription.textContent = project.description;
+
+        projectTitle.classList.add('project-title');
+        projectDescription.classList.add('project-description');
+
+        if (index % 2 === 0) {
+            projectArticle.style.backgroundColor = '#f8d568';
+        } else {
+            projectArticle.style.backgroundColor = '#004f24';
+            projectTitle.style.color = '#f8d568';
+            projectDescription.style.color = '#f8d568';
+        }
 
         projectArticle.appendChild(projectTitle);
         projectArticle.appendChild(projectDescription);
